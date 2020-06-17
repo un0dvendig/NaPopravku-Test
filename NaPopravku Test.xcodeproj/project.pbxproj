@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		DD21230A249A00BE00A9D2EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD212309249A00BE00A9D2EA /* AppDelegate.swift */; };
-		DD21230C249A00BE00A9D2EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD21230B249A00BE00A9D2EA /* SceneDelegate.swift */; };
 		DD21230E249A00BE00A9D2EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD21230D249A00BE00A9D2EA /* ViewController.swift */; };
 		DD212311249A00BE00A9D2EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD21230F249A00BE00A9D2EA /* Main.storyboard */; };
 		DD212313249A00C100A9D2EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD212312249A00C100A9D2EA /* Assets.xcassets */; };
@@ -18,7 +17,6 @@
 /* Begin PBXFileReference section */
 		DD212306249A00BE00A9D2EA /* NaPopravku Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NaPopravku Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD212309249A00BE00A9D2EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DD21230B249A00BE00A9D2EA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DD21230D249A00BE00A9D2EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DD212310249A00BE00A9D2EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DD212312249A00C100A9D2EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,15 +54,46 @@
 		DD212308249A00BE00A9D2EA /* NaPopravku Test */ = {
 			isa = PBXGroup;
 			children = (
-				DD212309249A00BE00A9D2EA /* AppDelegate.swift */,
-				DD21230B249A00BE00A9D2EA /* SceneDelegate.swift */,
-				DD21230D249A00BE00A9D2EA /* ViewController.swift */,
-				DD21230F249A00BE00A9D2EA /* Main.storyboard */,
-				DD212312249A00C100A9D2EA /* Assets.xcassets */,
-				DD212314249A00C100A9D2EA /* LaunchScreen.storyboard */,
-				DD212317249A00C100A9D2EA /* Info.plist */,
+				DD21231F249A011600A9D2EA /* Views */,
+				DD21231E249A010D00A9D2EA /* View controllers */,
+				DD21231D249A010500A9D2EA /* Resources */,
 			);
 			path = "NaPopravku Test";
+			sourceTree = "<group>";
+		};
+		DD21231D249A010500A9D2EA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DD212309249A00BE00A9D2EA /* AppDelegate.swift */,
+				DD212312249A00C100A9D2EA /* Assets.xcassets */,
+				DD212317249A00C100A9D2EA /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DD21231E249A010D00A9D2EA /* View controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DD21230D249A00BE00A9D2EA /* ViewController.swift */,
+			);
+			path = "View controllers";
+			sourceTree = "<group>";
+		};
+		DD21231F249A011600A9D2EA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DD212320249A011B00A9D2EA /* Storyboards */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DD212320249A011B00A9D2EA /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				DD21230F249A00BE00A9D2EA /* Main.storyboard */,
+				DD212314249A00C100A9D2EA /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +169,6 @@
 			files = (
 				DD21230E249A00BE00A9D2EA /* ViewController.swift in Sources */,
 				DD21230A249A00BE00A9D2EA /* AppDelegate.swift in Sources */,
-				DD21230C249A00BE00A9D2EA /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +244,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -270,7 +298,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -286,7 +314,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QZTJ8W8QRE;
-				INFOPLIST_FILE = "NaPopravku Test/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/NaPopravku Test/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -294,7 +323,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "un0dvend1g.NaPopravku-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -304,7 +333,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QZTJ8W8QRE;
-				INFOPLIST_FILE = "NaPopravku Test/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/NaPopravku Test/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,7 +342,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "un0dvend1g.NaPopravku-Test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
