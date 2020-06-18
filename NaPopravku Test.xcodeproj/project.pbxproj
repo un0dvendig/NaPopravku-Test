@@ -44,10 +44,18 @@
 		DD26CFB3249BB33700B09F73 /* CommitNode+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD26CFB2249BB33700B09F73 /* CommitNode+Equatable.swift */; };
 		DD26CFB5249BB3F900B09F73 /* Commit+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD26CFB4249BB3F900B09F73 /* Commit+Equatable.swift */; };
 		DD26CFB7249BB61000B09F73 /* Owner+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD26CFB6249BB61000B09F73 /* Owner+Equatable.swift */; };
+		DD26CFBF249BC38200B09F73 /* NaPopravku_Test_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD26CFBE249BC38200B09F73 /* NaPopravku_Test_UITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		DD26CFAB249BAEF100B09F73 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD2122FE249A00BE00A9D2EA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD212305249A00BE00A9D2EA;
+			remoteInfo = "NaPopravku Test";
+		};
+		DD26CFC1249BC38200B09F73 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DD2122FE249A00BE00A9D2EA /* Project object */;
 			proxyType = 1;
@@ -98,6 +106,9 @@
 		DD26CFB2249BB33700B09F73 /* CommitNode+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CommitNode+Equatable.swift"; sourceTree = "<group>"; };
 		DD26CFB4249BB3F900B09F73 /* Commit+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Commit+Equatable.swift"; sourceTree = "<group>"; };
 		DD26CFB6249BB61000B09F73 /* Owner+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Owner+Equatable.swift"; sourceTree = "<group>"; };
+		DD26CFBC249BC38200B09F73 /* NaPopravku Test UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NaPopravku Test UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD26CFBE249BC38200B09F73 /* NaPopravku_Test_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaPopravku_Test_UITests.swift; sourceTree = "<group>"; };
+		DD26CFC0249BC38200B09F73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +126,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DD26CFB9249BC38200B09F73 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -123,6 +141,7 @@
 			children = (
 				DD212308249A00BE00A9D2EA /* NaPopravku Test */,
 				DD26CFA7249BAEF100B09F73 /* NaPopravku Test Tests */,
+				DD26CFBD249BC38200B09F73 /* NaPopravku Test UITests */,
 				DD212307249A00BE00A9D2EA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -132,6 +151,7 @@
 			children = (
 				DD212306249A00BE00A9D2EA /* NaPopravku Test.app */,
 				DD26CFA6249BAEF100B09F73 /* NaPopravku Test Tests.xctest */,
+				DD26CFBC249BC38200B09F73 /* NaPopravku Test UITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -301,6 +321,15 @@
 			path = "NaPopravku Test Tests";
 			sourceTree = "<group>";
 		};
+		DD26CFBD249BC38200B09F73 /* NaPopravku Test UITests */ = {
+			isa = PBXGroup;
+			children = (
+				DD26CFBE249BC38200B09F73 /* NaPopravku_Test_UITests.swift */,
+				DD26CFC0249BC38200B09F73 /* Info.plist */,
+			);
+			path = "NaPopravku Test UITests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -339,6 +368,24 @@
 			productReference = DD26CFA6249BAEF100B09F73 /* NaPopravku Test Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		DD26CFBB249BC38200B09F73 /* NaPopravku Test UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD26CFC3249BC38200B09F73 /* Build configuration list for PBXNativeTarget "NaPopravku Test UITests" */;
+			buildPhases = (
+				DD26CFB8249BC38200B09F73 /* Sources */,
+				DD26CFB9249BC38200B09F73 /* Frameworks */,
+				DD26CFBA249BC38200B09F73 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DD26CFC2249BC38200B09F73 /* PBXTargetDependency */,
+			);
+			name = "NaPopravku Test UITests";
+			productName = "NaPopravku Test UITests";
+			productReference = DD26CFBC249BC38200B09F73 /* NaPopravku Test UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -353,6 +400,10 @@
 						CreatedOnToolsVersion = 11.5;
 					};
 					DD26CFA5249BAEF100B09F73 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = DD212305249A00BE00A9D2EA;
+					};
+					DD26CFBB249BC38200B09F73 = {
 						CreatedOnToolsVersion = 11.5;
 						TestTargetID = DD212305249A00BE00A9D2EA;
 					};
@@ -373,6 +424,7 @@
 			targets = (
 				DD212305249A00BE00A9D2EA /* NaPopravku Test */,
 				DD26CFA5249BAEF100B09F73 /* NaPopravku Test Tests */,
+				DD26CFBB249BC38200B09F73 /* NaPopravku Test UITests */,
 			);
 		};
 /* End PBXProject section */
@@ -389,6 +441,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		DD26CFA4249BAEF100B09F73 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD26CFBA249BC38200B09F73 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -446,6 +505,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DD26CFB8249BC38200B09F73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD26CFBF249BC38200B09F73 /* NaPopravku_Test_UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -453,6 +520,11 @@
 			isa = PBXTargetDependency;
 			target = DD212305249A00BE00A9D2EA /* NaPopravku Test */;
 			targetProxy = DD26CFAB249BAEF100B09F73 /* PBXContainerItemProxy */;
+		};
+		DD26CFC2249BC38200B09F73 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD212305249A00BE00A9D2EA /* NaPopravku Test */;
+			targetProxy = DD26CFC1249BC38200B09F73 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -670,6 +742,46 @@
 			};
 			name = Release;
 		};
+		DD26CFC4249BC38200B09F73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QZTJ8W8QRE;
+				INFOPLIST_FILE = "NaPopravku Test UITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "un0dvend1g.NaPopravku-Test-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "NaPopravku Test";
+			};
+			name = Debug;
+		};
+		DD26CFC5249BC38200B09F73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QZTJ8W8QRE;
+				INFOPLIST_FILE = "NaPopravku Test UITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "un0dvend1g.NaPopravku-Test-UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "NaPopravku Test";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -696,6 +808,15 @@
 			buildConfigurations = (
 				DD26CFAE249BAEF100B09F73 /* Debug */,
 				DD26CFAF249BAEF100B09F73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD26CFC3249BC38200B09F73 /* Build configuration list for PBXNativeTarget "NaPopravku Test UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD26CFC4249BC38200B09F73 /* Debug */,
+				DD26CFC5249BC38200B09F73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -36,6 +36,20 @@ class RepositoryListViewController: UIViewController {
         setupView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        /// Hide the navigation bar for this view controller.
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        /// Show the navigation bar for other view controllers.
+        self.navigationController?.navigationBar.isHidden = false
+    }
+    
     // MARK: - Private methods
     
     private func setupViewModel() {

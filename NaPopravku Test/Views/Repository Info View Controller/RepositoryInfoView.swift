@@ -34,15 +34,13 @@ class RepositoryInfoView: UIView {
         return label
     }()
     
-    lazy var repositoryInfoLastCommitMessageTextView: UITextView = {
-        let textView = UITextView()
-        textView.textColor = .black
-        textView.font = .systemFont(ofSize: 18)
-        textView.backgroundColor = .white
-        textView.textAlignment = .center
-        textView.isSelectable = false
-        textView.isEditable = false
-        return textView
+    lazy var repositoryInfoLastCommitMessageLabel: UILabel = {
+        let label = UILabel()
+        label.numberOfLines = 0
+        label.lineBreakMode = .byTruncatingTail
+        label.textAlignment = .center
+        label.textColor = .black
+        return label
     }()
     
     lazy var repositoryInfoLastCommitAuthorNameLabel: UILabel = {
@@ -121,7 +119,7 @@ class RepositoryInfoView: UIView {
     // MARK: - Private methods
     
     private func configureLastCommit(with viewModel: RepositoryInfoViewModel) {
-        repositoryInfoLastCommitMessageTextView.text = viewModel.lastCommitMessage
+        repositoryInfoLastCommitMessageLabel.text = viewModel.lastCommitMessage
         repositoryInfoLastCommitAuthorNameLabel.text = viewModel.lastCommitAuthorName
         repositoryInfoLastCommitDateLabel.text = viewModel.lastCommitDate
         repositoryInfoLastCommitParentsLabel.text = viewModel.lastCommitShaParents
@@ -131,7 +129,7 @@ class RepositoryInfoView: UIView {
         self.addSubview(repositoryInfoRepositoryNameLabel)
         self.addSubview(repositoryInfoRepositoryAuthorAvatarImageView)
         self.addSubview(repositoryInfoRepositoryAuthorNameLabel)
-        self.addSubview(repositoryInfoLastCommitMessageTextView)
+        self.addSubview(repositoryInfoLastCommitMessageLabel)
         self.addSubview(repositoryInfoLastCommitAuthorNameLabel)
         self.addSubview(repositoryInfoLastCommitDateLabel)
         self.addSubview(repositoryInfoLastCommitParentsLabel)
@@ -143,7 +141,7 @@ class RepositoryInfoView: UIView {
         setupRepositoryAuthorAvatarImageView()
         setupRepositoryAuthorNameLabel()
         
-        setupLastCommitMessageTextView()
+        setupLastCommitMessageLabel()
         setupLastCommitAuthorNameLabel()
         setupLastCommitDateLabel()
         setupLastCommitParentsLabel()
@@ -157,6 +155,8 @@ class RepositoryInfoView: UIView {
             repositoryInfoRepositoryNameLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 5),
             repositoryInfoRepositoryNameLabel.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -5)
         ])
+        
+        repositoryInfoRepositoryNameLabel.setContentHuggingPriority(.defaultHigh, for: .vertical)
     }
     
     private func setupRepositoryAuthorAvatarImageView() {
@@ -178,28 +178,32 @@ class RepositoryInfoView: UIView {
             repositoryInfoRepositoryAuthorNameLabel.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 5),
             repositoryInfoRepositoryAuthorNameLabel.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -5)
         ])
+        
+        repositoryInfoRepositoryAuthorNameLabel.setContentHuggingPriority(.defaultHigh, for: .vertical)
     }
     
-    private func setupLastCommitMessageTextView() {
-        repositoryInfoLastCommitMessageTextView.translatesAutoresizingMaskIntoConstraints = false
+    private func setupLastCommitMessageLabel() {
+        repositoryInfoLastCommitMessageLabel.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            repositoryInfoLastCommitMessageTextView.topAnchor.constraint(equalTo: repositoryInfoRepositoryAuthorNameLabel.bottomAnchor, constant: 5),
-            repositoryInfoLastCommitMessageTextView.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 5),
-            repositoryInfoLastCommitMessageTextView.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -5)
+            repositoryInfoLastCommitMessageLabel.topAnchor.constraint(equalTo: repositoryInfoRepositoryAuthorNameLabel.bottomAnchor, constant: 5),
+            repositoryInfoLastCommitMessageLabel.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 5),
+            repositoryInfoLastCommitMessageLabel.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -5)
         ])
         
-        repositoryInfoLastCommitMessageTextView.setContentHuggingPriority(.defaultHigh, for: .vertical)
+        repositoryInfoLastCommitMessageLabel.setContentHuggingPriority(.defaultHigh, for: .vertical)
     }
     
     private func setupLastCommitAuthorNameLabel() {
         repositoryInfoLastCommitAuthorNameLabel.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            repositoryInfoLastCommitAuthorNameLabel.topAnchor.constraint(equalTo: repositoryInfoLastCommitMessageTextView.bottomAnchor, constant: 5),
+            repositoryInfoLastCommitAuthorNameLabel.topAnchor.constraint(equalTo: repositoryInfoLastCommitMessageLabel.bottomAnchor, constant: 5),
             repositoryInfoLastCommitAuthorNameLabel.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 5),
             repositoryInfoLastCommitAuthorNameLabel.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -5)
         ])
+        
+        repositoryInfoLastCommitAuthorNameLabel.setContentHuggingPriority(.defaultHigh, for: .vertical)
     }
     
     private func setupLastCommitDateLabel() {
@@ -210,6 +214,8 @@ class RepositoryInfoView: UIView {
             repositoryInfoLastCommitDateLabel.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 5),
             repositoryInfoLastCommitDateLabel.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -5)
         ])
+        
+        repositoryInfoLastCommitDateLabel.setContentHuggingPriority(.defaultHigh, for: .vertical)
     }
     
     private func setupLastCommitParentsLabel() {
@@ -222,6 +228,6 @@ class RepositoryInfoView: UIView {
             repositoryInfoLastCommitParentsLabel.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -5)
         ])
         
-        repositoryInfoLastCommitMessageTextView.setContentHuggingPriority(.defaultLow, for: .vertical)
+        repositoryInfoLastCommitParentsLabel.setContentHuggingPriority(.defaultLow, for: .vertical)
     }
 }
