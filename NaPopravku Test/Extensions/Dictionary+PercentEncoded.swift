@@ -1,0 +1,23 @@
+//
+//  Dictionary+PercentEncoded.swift
+//  NaPopravku Test
+//
+//  Created by Eugene Ilyin on 17.06.2020.
+//  Copyright © 2020 Eugene Ilyin. All rights reserved.
+//
+
+import Foundation
+
+extension Dictionary{
+    
+    /// Method that helps to encode parameters properly.
+    func percentEncoded() -> Data? {
+        return map { (key, value) in
+            let escapedKey = "\(key)".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? ""
+            let escapedValue = "\(value)".addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? ""
+            return escapedKey + "=" + escapedValue
+        }
+        .joined(separator: "&")
+        .data(using: .utf8)
+    }
+}

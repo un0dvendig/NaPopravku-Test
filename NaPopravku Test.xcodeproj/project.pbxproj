@@ -8,20 +8,76 @@
 
 /* Begin PBXBuildFile section */
 		DD21230A249A00BE00A9D2EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD212309249A00BE00A9D2EA /* AppDelegate.swift */; };
-		DD21230E249A00BE00A9D2EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD21230D249A00BE00A9D2EA /* ViewController.swift */; };
 		DD212311249A00BE00A9D2EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD21230F249A00BE00A9D2EA /* Main.storyboard */; };
 		DD212313249A00C100A9D2EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD212312249A00C100A9D2EA /* Assets.xcassets */; };
 		DD212316249A00C100A9D2EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD212314249A00C100A9D2EA /* LaunchScreen.storyboard */; };
+		DD212323249A01DA00A9D2EA /* URLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD212322249A01DA00A9D2EA /* URLBuilder.swift */; };
+		DD212325249A027100A9D2EA /* URLRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD212324249A027100A9D2EA /* URLRequestBuilder.swift */; };
+		DD212327249A02A000A9D2EA /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD212326249A02A000A9D2EA /* ImageCache.swift */; };
+		DD212329249A02C400A9D2EA /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD212328249A02C400A9D2EA /* DownloadManager.swift */; };
+		DD21232B249A02DE00A9D2EA /* DataWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD21232A249A02DE00A9D2EA /* DataWorker.swift */; };
+		DD21232E249A031500A9D2EA /* HTTPURLResponse+HasSuccessStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD21232D249A031500A9D2EA /* HTTPURLResponse+HasSuccessStatusCode.swift */; };
+		DD212330249A033100A9D2EA /* Dictionary+PercentEncoded.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD21232F249A033100A9D2EA /* Dictionary+PercentEncoded.swift */; };
+		DD212333249A036400A9D2EA /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD212332249A036400A9D2EA /* CustomError.swift */; };
+		DD212336249A067400A9D2EA /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD212335249A067400A9D2EA /* Repository.swift */; };
+		DD212338249A06D800A9D2EA /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD212337249A06D800A9D2EA /* Owner.swift */; };
+		DD21233C249A0BC600A9D2EA /* RepositoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD21233B249A0BC600A9D2EA /* RepositoryListViewController.swift */; };
+		DD21233F249A0C0F00A9D2EA /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD21233E249A0C0F00A9D2EA /* Coordinator.swift */; };
+		DD212341249A0C2400A9D2EA /* RepostoriesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD212340249A0C2400A9D2EA /* RepostoriesCoordinator.swift */; };
+		DD212343249A12F300A9D2EA /* RepositoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD212342249A12F300A9D2EA /* RepositoryListView.swift */; };
+		DD212347249A132700A9D2EA /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD212346249A132700A9D2EA /* AsyncImageView.swift */; };
+		DD21234C249A144600A9D2EA /* RepositoryListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD21234A249A144600A9D2EA /* RepositoryListTableViewCell.swift */; };
+		DD212354249A14D900A9D2EA /* UITableViewCell + ReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD212353249A14D900A9D2EA /* UITableViewCell + ReuseIdentifier.swift */; };
+		DD212357249A371400A9D2EA /* RepositoryListTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD212356249A371400A9D2EA /* RepositoryListTableViewCellViewModel.swift */; };
+		DD21235A249A38D200A9D2EA /* RepositoryListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD212359249A38D200A9D2EA /* RepositoryListTableViewDataSource.swift */; };
+		DD21235E249A3BB600A9D2EA /* RepositoryWarehouse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD21235D249A3BB600A9D2EA /* RepositoryWarehouse.swift */; };
+		DD212360249A3D7900A9D2EA /* RepositoryListTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD21235F249A3D7900A9D2EA /* RepositoryListTableViewDelegate.swift */; };
+		DD212362249A3E2200A9D2EA /* RepositoryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD212361249A3E2200A9D2EA /* RepositoryListViewModel.swift */; };
+		DD212364249AADEB00A9D2EA /* RepositoryListTableViewPrefetchingDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD212363249AADEB00A9D2EA /* RepositoryListTableViewPrefetchingDataSource.swift */; };
+		DD212366249B699900A9D2EA /* Commit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD212365249B699900A9D2EA /* Commit.swift */; };
+		DD212368249B6AD800A9D2EA /* CommitNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD212367249B6AD800A9D2EA /* CommitNode.swift */; };
+		DD21236A249B6B9E00A9D2EA /* CommitNodeAuthor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD212369249B6B9E00A9D2EA /* CommitNodeAuthor.swift */; };
+		DD21236E249B6C9500A9D2EA /* RepositoryInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD21236D249B6C9500A9D2EA /* RepositoryInfoViewController.swift */; };
+		DD212371249B6E0000A9D2EA /* RepositoryInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD212370249B6E0000A9D2EA /* RepositoryInfoView.swift */; };
+		DD212373249B732E00A9D2EA /* RepositoryInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD212372249B732E00A9D2EA /* RepositoryInfoViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DD212306249A00BE00A9D2EA /* NaPopravku Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NaPopravku Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD212309249A00BE00A9D2EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DD21230D249A00BE00A9D2EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DD212310249A00BE00A9D2EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DD212312249A00C100A9D2EA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD212315249A00C100A9D2EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD212317249A00C100A9D2EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD212322249A01DA00A9D2EA /* URLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLBuilder.swift; sourceTree = "<group>"; };
+		DD212324249A027100A9D2EA /* URLRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestBuilder.swift; sourceTree = "<group>"; };
+		DD212326249A02A000A9D2EA /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		DD212328249A02C400A9D2EA /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
+		DD21232A249A02DE00A9D2EA /* DataWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataWorker.swift; sourceTree = "<group>"; };
+		DD21232D249A031500A9D2EA /* HTTPURLResponse+HasSuccessStatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+HasSuccessStatusCode.swift"; sourceTree = "<group>"; };
+		DD21232F249A033100A9D2EA /* Dictionary+PercentEncoded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+PercentEncoded.swift"; sourceTree = "<group>"; };
+		DD212332249A036400A9D2EA /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
+		DD212335249A067400A9D2EA /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		DD212337249A06D800A9D2EA /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
+		DD21233B249A0BC600A9D2EA /* RepositoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListViewController.swift; sourceTree = "<group>"; };
+		DD21233E249A0C0F00A9D2EA /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		DD212340249A0C2400A9D2EA /* RepostoriesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepostoriesCoordinator.swift; sourceTree = "<group>"; };
+		DD212342249A12F300A9D2EA /* RepositoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListView.swift; sourceTree = "<group>"; };
+		DD212346249A132700A9D2EA /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
+		DD21234A249A144600A9D2EA /* RepositoryListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListTableViewCell.swift; sourceTree = "<group>"; };
+		DD212353249A14D900A9D2EA /* UITableViewCell + ReuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell + ReuseIdentifier.swift"; sourceTree = "<group>"; };
+		DD212356249A371400A9D2EA /* RepositoryListTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		DD212359249A38D200A9D2EA /* RepositoryListTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListTableViewDataSource.swift; sourceTree = "<group>"; };
+		DD21235D249A3BB600A9D2EA /* RepositoryWarehouse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryWarehouse.swift; sourceTree = "<group>"; };
+		DD21235F249A3D7900A9D2EA /* RepositoryListTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListTableViewDelegate.swift; sourceTree = "<group>"; };
+		DD212361249A3E2200A9D2EA /* RepositoryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListViewModel.swift; sourceTree = "<group>"; };
+		DD212363249AADEB00A9D2EA /* RepositoryListTableViewPrefetchingDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListTableViewPrefetchingDataSource.swift; sourceTree = "<group>"; };
+		DD212365249B699900A9D2EA /* Commit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commit.swift; sourceTree = "<group>"; };
+		DD212367249B6AD800A9D2EA /* CommitNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitNode.swift; sourceTree = "<group>"; };
+		DD212369249B6B9E00A9D2EA /* CommitNodeAuthor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitNodeAuthor.swift; sourceTree = "<group>"; };
+		DD21236D249B6C9500A9D2EA /* RepositoryInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryInfoViewController.swift; sourceTree = "<group>"; };
+		DD212370249B6E0000A9D2EA /* RepositoryInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryInfoView.swift; sourceTree = "<group>"; };
+		DD212372249B732E00A9D2EA /* RepositoryInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryInfoViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,9 +110,15 @@
 		DD212308249A00BE00A9D2EA /* NaPopravku Test */ = {
 			isa = PBXGroup;
 			children = (
-				DD21231F249A011600A9D2EA /* Views */,
-				DD21231E249A010D00A9D2EA /* View controllers */,
+				DD212331249A035B00A9D2EA /* Constants */,
+				DD21233D249A0C0300A9D2EA /* Coordinators */,
+				DD21232C249A02F100A9D2EA /* Extensions */,
+				DD212334249A066800A9D2EA /* Models */,
 				DD21231D249A010500A9D2EA /* Resources */,
+				DD212321249A01AA00A9D2EA /* Utils */,
+				DD21231E249A010D00A9D2EA /* View controllers */,
+				DD212355249A36F200A9D2EA /* View models */,
+				DD21231F249A011600A9D2EA /* Views */,
 			);
 			path = "NaPopravku Test";
 			sourceTree = "<group>";
@@ -74,7 +136,8 @@
 		DD21231E249A010D00A9D2EA /* View controllers */ = {
 			isa = PBXGroup;
 			children = (
-				DD21230D249A00BE00A9D2EA /* ViewController.swift */,
+				DD21233B249A0BC600A9D2EA /* RepositoryListViewController.swift */,
+				DD21236D249B6C9500A9D2EA /* RepositoryInfoViewController.swift */,
 			);
 			path = "View controllers";
 			sourceTree = "<group>";
@@ -82,6 +145,9 @@
 		DD21231F249A011600A9D2EA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DD212345249A131A00A9D2EA /* Custom Views */,
+				DD21236F249B6DED00A9D2EA /* Repository Info View Controller */,
+				DD212344249A130B00A9D2EA /* Repository List View Controller */,
 				DD212320249A011B00A9D2EA /* Storyboards */,
 			);
 			path = Views;
@@ -90,10 +156,108 @@
 		DD212320249A011B00A9D2EA /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				DD21230F249A00BE00A9D2EA /* Main.storyboard */,
 				DD212314249A00C100A9D2EA /* LaunchScreen.storyboard */,
+				DD21230F249A00BE00A9D2EA /* Main.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		DD212321249A01AA00A9D2EA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DD212358249A38A800A9D2EA /* Repository List View Controller */,
+				DD21232A249A02DE00A9D2EA /* DataWorker.swift */,
+				DD212328249A02C400A9D2EA /* DownloadManager.swift */,
+				DD212326249A02A000A9D2EA /* ImageCache.swift */,
+				DD212322249A01DA00A9D2EA /* URLBuilder.swift */,
+				DD212324249A027100A9D2EA /* URLRequestBuilder.swift */,
+				DD21235D249A3BB600A9D2EA /* RepositoryWarehouse.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		DD21232C249A02F100A9D2EA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DD21232F249A033100A9D2EA /* Dictionary+PercentEncoded.swift */,
+				DD21232D249A031500A9D2EA /* HTTPURLResponse+HasSuccessStatusCode.swift */,
+				DD212353249A14D900A9D2EA /* UITableViewCell + ReuseIdentifier.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DD212331249A035B00A9D2EA /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				DD212332249A036400A9D2EA /* CustomError.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		DD212334249A066800A9D2EA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DD212335249A067400A9D2EA /* Repository.swift */,
+				DD212337249A06D800A9D2EA /* Owner.swift */,
+				DD212365249B699900A9D2EA /* Commit.swift */,
+				DD212367249B6AD800A9D2EA /* CommitNode.swift */,
+				DD212369249B6B9E00A9D2EA /* CommitNodeAuthor.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DD21233D249A0C0300A9D2EA /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				DD21233E249A0C0F00A9D2EA /* Coordinator.swift */,
+				DD212340249A0C2400A9D2EA /* RepostoriesCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		DD212344249A130B00A9D2EA /* Repository List View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DD212342249A12F300A9D2EA /* RepositoryListView.swift */,
+				DD21234A249A144600A9D2EA /* RepositoryListTableViewCell.swift */,
+			);
+			path = "Repository List View Controller";
+			sourceTree = "<group>";
+		};
+		DD212345249A131A00A9D2EA /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				DD212346249A132700A9D2EA /* AsyncImageView.swift */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		DD212355249A36F200A9D2EA /* View models */ = {
+			isa = PBXGroup;
+			children = (
+				DD212356249A371400A9D2EA /* RepositoryListTableViewCellViewModel.swift */,
+				DD212361249A3E2200A9D2EA /* RepositoryListViewModel.swift */,
+				DD212372249B732E00A9D2EA /* RepositoryInfoViewModel.swift */,
+			);
+			path = "View models";
+			sourceTree = "<group>";
+		};
+		DD212358249A38A800A9D2EA /* Repository List View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DD212359249A38D200A9D2EA /* RepositoryListTableViewDataSource.swift */,
+				DD21235F249A3D7900A9D2EA /* RepositoryListTableViewDelegate.swift */,
+				DD212363249AADEB00A9D2EA /* RepositoryListTableViewPrefetchingDataSource.swift */,
+			);
+			path = "Repository List View Controller";
+			sourceTree = "<group>";
+		};
+		DD21236F249B6DED00A9D2EA /* Repository Info View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DD212370249B6E0000A9D2EA /* RepositoryInfoView.swift */,
+			);
+			path = "Repository Info View Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,8 +331,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD21230E249A00BE00A9D2EA /* ViewController.swift in Sources */,
+				DD212362249A3E2200A9D2EA /* RepositoryListViewModel.swift in Sources */,
+				DD212357249A371400A9D2EA /* RepositoryListTableViewCellViewModel.swift in Sources */,
+				DD212327249A02A000A9D2EA /* ImageCache.swift in Sources */,
+				DD21236A249B6B9E00A9D2EA /* CommitNodeAuthor.swift in Sources */,
+				DD212338249A06D800A9D2EA /* Owner.swift in Sources */,
+				DD212329249A02C400A9D2EA /* DownloadManager.swift in Sources */,
+				DD212325249A027100A9D2EA /* URLRequestBuilder.swift in Sources */,
+				DD21235A249A38D200A9D2EA /* RepositoryListTableViewDataSource.swift in Sources */,
+				DD21232B249A02DE00A9D2EA /* DataWorker.swift in Sources */,
+				DD21233F249A0C0F00A9D2EA /* Coordinator.swift in Sources */,
+				DD212368249B6AD800A9D2EA /* CommitNode.swift in Sources */,
+				DD21235E249A3BB600A9D2EA /* RepositoryWarehouse.swift in Sources */,
+				DD212341249A0C2400A9D2EA /* RepostoriesCoordinator.swift in Sources */,
+				DD212336249A067400A9D2EA /* Repository.swift in Sources */,
+				DD212364249AADEB00A9D2EA /* RepositoryListTableViewPrefetchingDataSource.swift in Sources */,
+				DD212373249B732E00A9D2EA /* RepositoryInfoViewModel.swift in Sources */,
+				DD21233C249A0BC600A9D2EA /* RepositoryListViewController.swift in Sources */,
+				DD212343249A12F300A9D2EA /* RepositoryListView.swift in Sources */,
+				DD212366249B699900A9D2EA /* Commit.swift in Sources */,
+				DD212333249A036400A9D2EA /* CustomError.swift in Sources */,
+				DD212354249A14D900A9D2EA /* UITableViewCell + ReuseIdentifier.swift in Sources */,
+				DD21236E249B6C9500A9D2EA /* RepositoryInfoViewController.swift in Sources */,
+				DD212371249B6E0000A9D2EA /* RepositoryInfoView.swift in Sources */,
+				DD212330249A033100A9D2EA /* Dictionary+PercentEncoded.swift in Sources */,
+				DD212360249A3D7900A9D2EA /* RepositoryListTableViewDelegate.swift in Sources */,
+				DD212347249A132700A9D2EA /* AsyncImageView.swift in Sources */,
 				DD21230A249A00BE00A9D2EA /* AppDelegate.swift in Sources */,
+				DD21234C249A144600A9D2EA /* RepositoryListTableViewCell.swift in Sources */,
+				DD21232E249A031500A9D2EA /* HTTPURLResponse+HasSuccessStatusCode.swift in Sources */,
+				DD212323249A01DA00A9D2EA /* URLBuilder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
