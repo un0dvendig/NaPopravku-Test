@@ -51,10 +51,4 @@ class DataWorker {
         return model
     }
     
-    /// Convert given Data to String. Returns optional String.
-//    func convertDataToString(_ data: Data) -> String? {
-//        let string = String(data: data, encoding: .utf8)
-//        return string
-//    }
-    
 }

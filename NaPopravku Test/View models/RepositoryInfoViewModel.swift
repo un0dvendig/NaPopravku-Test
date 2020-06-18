@@ -21,7 +21,7 @@ struct RepositoryInfoViewModel {
         let dateInputFormatter = ISO8601DateFormatter()
         
         let dateOutputFormatter = DateFormatter()
-        dateOutputFormatter.dateFormat = "dd.mm.yyyy"
+        dateOutputFormatter.dateFormat = "dd.MM.yyyy"
         
         self.dateInputFormatter = dateInputFormatter
         self.dateOutputFormatter = dateOutputFormatter
@@ -30,8 +30,8 @@ struct RepositoryInfoViewModel {
     
     // MARK: - Computed private properties
     
-    private var lastCommit: Commit? {
-        return repository.commits?.last
+    private var lastCommit: Commit? { /// Last commit sorting by date is returned first by GitHub's API
+        return repository.commits?.first
     }
     
     // MARK: - Computed properties
@@ -87,7 +87,7 @@ struct RepositoryInfoViewModel {
         return dateOutputFormatter.string(from: date)
     }
     
-    var shaParents: String {
+    var lastCommitShaParents: String {
         guard let lastCommit = lastCommit else {
             fatalError("Check 'needsMoreInfo' before accessing this property.")
         }

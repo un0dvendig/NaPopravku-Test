@@ -16,7 +16,7 @@ struct RepositoryListViewModel {
     
     // MARK: - Initialization
     
-    init(coordinatorReference: RepostoriesCoordinator?) {
+    init(coordinatorReference: RepostoriesCoordinator? = nil) {
         self.dataSource = RepositoryListTableViewDataSource()
         self.dataSourcePrefetching = PostsListViewControllerPrefetchingDataSource()
         

@@ -12,7 +12,6 @@
 		DD212313249A00C100A9D2EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD212312249A00C100A9D2EA /* Assets.xcassets */; };
 		DD212316249A00C100A9D2EA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD212314249A00C100A9D2EA /* LaunchScreen.storyboard */; };
 		DD212323249A01DA00A9D2EA /* URLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD212322249A01DA00A9D2EA /* URLBuilder.swift */; };
-		DD212325249A027100A9D2EA /* URLRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD212324249A027100A9D2EA /* URLRequestBuilder.swift */; };
 		DD212327249A02A000A9D2EA /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD212326249A02A000A9D2EA /* ImageCache.swift */; };
 		DD212329249A02C400A9D2EA /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD212328249A02C400A9D2EA /* DownloadManager.swift */; };
 		DD21232B249A02DE00A9D2EA /* DataWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD21232A249A02DE00A9D2EA /* DataWorker.swift */; };
@@ -40,7 +39,22 @@
 		DD21236E249B6C9500A9D2EA /* RepositoryInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD21236D249B6C9500A9D2EA /* RepositoryInfoViewController.swift */; };
 		DD212371249B6E0000A9D2EA /* RepositoryInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD212370249B6E0000A9D2EA /* RepositoryInfoView.swift */; };
 		DD212373249B732E00A9D2EA /* RepositoryInfoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD212372249B732E00A9D2EA /* RepositoryInfoViewModel.swift */; };
+		DD26CFA9249BAEF100B09F73 /* NaPopravku_Test_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD26CFA8249BAEF100B09F73 /* NaPopravku_Test_Tests.swift */; };
+		DD26CFB1249BB10600B09F73 /* CommitNodeAuthor+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD26CFB0249BB10600B09F73 /* CommitNodeAuthor+Equatable.swift */; };
+		DD26CFB3249BB33700B09F73 /* CommitNode+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD26CFB2249BB33700B09F73 /* CommitNode+Equatable.swift */; };
+		DD26CFB5249BB3F900B09F73 /* Commit+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD26CFB4249BB3F900B09F73 /* Commit+Equatable.swift */; };
+		DD26CFB7249BB61000B09F73 /* Owner+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD26CFB6249BB61000B09F73 /* Owner+Equatable.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DD26CFAB249BAEF100B09F73 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DD2122FE249A00BE00A9D2EA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DD212305249A00BE00A9D2EA;
+			remoteInfo = "NaPopravku Test";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		DD212306249A00BE00A9D2EA /* NaPopravku Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NaPopravku Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,7 +64,6 @@
 		DD212315249A00C100A9D2EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD212317249A00C100A9D2EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DD212322249A01DA00A9D2EA /* URLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLBuilder.swift; sourceTree = "<group>"; };
-		DD212324249A027100A9D2EA /* URLRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestBuilder.swift; sourceTree = "<group>"; };
 		DD212326249A02A000A9D2EA /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		DD212328249A02C400A9D2EA /* DownloadManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
 		DD21232A249A02DE00A9D2EA /* DataWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataWorker.swift; sourceTree = "<group>"; };
@@ -78,10 +91,24 @@
 		DD21236D249B6C9500A9D2EA /* RepositoryInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryInfoViewController.swift; sourceTree = "<group>"; };
 		DD212370249B6E0000A9D2EA /* RepositoryInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryInfoView.swift; sourceTree = "<group>"; };
 		DD212372249B732E00A9D2EA /* RepositoryInfoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryInfoViewModel.swift; sourceTree = "<group>"; };
+		DD26CFA6249BAEF100B09F73 /* NaPopravku Test Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NaPopravku Test Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD26CFA8249BAEF100B09F73 /* NaPopravku_Test_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaPopravku_Test_Tests.swift; sourceTree = "<group>"; };
+		DD26CFAA249BAEF100B09F73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD26CFB0249BB10600B09F73 /* CommitNodeAuthor+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CommitNodeAuthor+Equatable.swift"; sourceTree = "<group>"; };
+		DD26CFB2249BB33700B09F73 /* CommitNode+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CommitNode+Equatable.swift"; sourceTree = "<group>"; };
+		DD26CFB4249BB3F900B09F73 /* Commit+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Commit+Equatable.swift"; sourceTree = "<group>"; };
+		DD26CFB6249BB61000B09F73 /* Owner+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Owner+Equatable.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		DD212303249A00BE00A9D2EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD26CFA3249BAEF100B09F73 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -95,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				DD212308249A00BE00A9D2EA /* NaPopravku Test */,
+				DD26CFA7249BAEF100B09F73 /* NaPopravku Test Tests */,
 				DD212307249A00BE00A9D2EA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				DD212306249A00BE00A9D2EA /* NaPopravku Test.app */,
+				DD26CFA6249BAEF100B09F73 /* NaPopravku Test Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -170,7 +199,6 @@
 				DD212328249A02C400A9D2EA /* DownloadManager.swift */,
 				DD212326249A02A000A9D2EA /* ImageCache.swift */,
 				DD212322249A01DA00A9D2EA /* URLBuilder.swift */,
-				DD212324249A027100A9D2EA /* URLRequestBuilder.swift */,
 				DD21235D249A3BB600A9D2EA /* RepositoryWarehouse.swift */,
 			);
 			path = Utils;
@@ -260,6 +288,19 @@
 			path = "Repository Info View Controller";
 			sourceTree = "<group>";
 		};
+		DD26CFA7249BAEF100B09F73 /* NaPopravku Test Tests */ = {
+			isa = PBXGroup;
+			children = (
+				DD26CFA8249BAEF100B09F73 /* NaPopravku_Test_Tests.swift */,
+				DD26CFB2249BB33700B09F73 /* CommitNode+Equatable.swift */,
+				DD26CFB6249BB61000B09F73 /* Owner+Equatable.swift */,
+				DD26CFB4249BB3F900B09F73 /* Commit+Equatable.swift */,
+				DD26CFB0249BB10600B09F73 /* CommitNodeAuthor+Equatable.swift */,
+				DD26CFAA249BAEF100B09F73 /* Info.plist */,
+			);
+			path = "NaPopravku Test Tests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -280,6 +321,24 @@
 			productReference = DD212306249A00BE00A9D2EA /* NaPopravku Test.app */;
 			productType = "com.apple.product-type.application";
 		};
+		DD26CFA5249BAEF100B09F73 /* NaPopravku Test Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD26CFAD249BAEF100B09F73 /* Build configuration list for PBXNativeTarget "NaPopravku Test Tests" */;
+			buildPhases = (
+				DD26CFA2249BAEF100B09F73 /* Sources */,
+				DD26CFA3249BAEF100B09F73 /* Frameworks */,
+				DD26CFA4249BAEF100B09F73 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DD26CFAC249BAEF100B09F73 /* PBXTargetDependency */,
+			);
+			name = "NaPopravku Test Tests";
+			productName = "NaPopravku Test Tests";
+			productReference = DD26CFA6249BAEF100B09F73 /* NaPopravku Test Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -292,6 +351,10 @@
 				TargetAttributes = {
 					DD212305249A00BE00A9D2EA = {
 						CreatedOnToolsVersion = 11.5;
+					};
+					DD26CFA5249BAEF100B09F73 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = DD212305249A00BE00A9D2EA;
 					};
 				};
 			};
@@ -309,6 +372,7 @@
 			projectRoot = "";
 			targets = (
 				DD212305249A00BE00A9D2EA /* NaPopravku Test */,
+				DD26CFA5249BAEF100B09F73 /* NaPopravku Test Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -321,6 +385,13 @@
 				DD212316249A00C100A9D2EA /* LaunchScreen.storyboard in Resources */,
 				DD212313249A00C100A9D2EA /* Assets.xcassets in Resources */,
 				DD212311249A00BE00A9D2EA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD26CFA4249BAEF100B09F73 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,7 +408,6 @@
 				DD21236A249B6B9E00A9D2EA /* CommitNodeAuthor.swift in Sources */,
 				DD212338249A06D800A9D2EA /* Owner.swift in Sources */,
 				DD212329249A02C400A9D2EA /* DownloadManager.swift in Sources */,
-				DD212325249A027100A9D2EA /* URLRequestBuilder.swift in Sources */,
 				DD21235A249A38D200A9D2EA /* RepositoryListTableViewDataSource.swift in Sources */,
 				DD21232B249A02DE00A9D2EA /* DataWorker.swift in Sources */,
 				DD21233F249A0C0F00A9D2EA /* Coordinator.swift in Sources */,
@@ -364,7 +434,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DD26CFA2249BAEF100B09F73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD26CFB7249BB61000B09F73 /* Owner+Equatable.swift in Sources */,
+				DD26CFB1249BB10600B09F73 /* CommitNodeAuthor+Equatable.swift in Sources */,
+				DD26CFB5249BB3F900B09F73 /* Commit+Equatable.swift in Sources */,
+				DD26CFB3249BB33700B09F73 /* CommitNode+Equatable.swift in Sources */,
+				DD26CFA9249BAEF100B09F73 /* NaPopravku_Test_Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DD26CFAC249BAEF100B09F73 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DD212305249A00BE00A9D2EA /* NaPopravku Test */;
+			targetProxy = DD26CFAB249BAEF100B09F73 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		DD21230F249A00BE00A9D2EA /* Main.storyboard */ = {
@@ -538,6 +628,48 @@
 			};
 			name = Release;
 		};
+		DD26CFAE249BAEF100B09F73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QZTJ8W8QRE;
+				INFOPLIST_FILE = "NaPopravku Test Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "un0dvend1g.NaPopravku-Test-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NaPopravku Test.app/NaPopravku Test";
+			};
+			name = Debug;
+		};
+		DD26CFAF249BAEF100B09F73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QZTJ8W8QRE;
+				INFOPLIST_FILE = "NaPopravku Test Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "un0dvend1g.NaPopravku-Test-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NaPopravku Test.app/NaPopravku Test";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -555,6 +687,15 @@
 			buildConfigurations = (
 				DD21231B249A00C100A9D2EA /* Debug */,
 				DD21231C249A00C100A9D2EA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD26CFAD249BAEF100B09F73 /* Build configuration list for PBXNativeTarget "NaPopravku Test Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD26CFAE249BAEF100B09F73 /* Debug */,
+				DD26CFAF249BAEF100B09F73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
