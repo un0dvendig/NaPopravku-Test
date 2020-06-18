@@ -10,6 +10,10 @@ import UIKit
 
 class RepositoryListTableViewDataSource: NSObject, UITableViewDataSource {
     
+    // MARK: - Properties
+    
+    weak var alertHandlerReference: AlertHandler?
+    
     // MARK: - UITableViewDataSource methods
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -20,6 +24,7 @@ class RepositoryListTableViewDataSource: NSObject, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: RepositoryListTableViewCell.reuseIdentifier) as? RepositoryListTableViewCell else {
             fatalError("Dequeued cell should be of type RepositoryListTableViewCell")
         }
+        cell.alertHandlerReference = alertHandlerReference
         
         guard let repository = RepositoryWarehouse.shared.getRepository(at: indexPath.row) else {
             fatalError("Cannot find the Repository entity for the cell at \(indexPath)")

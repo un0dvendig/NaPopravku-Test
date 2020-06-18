@@ -16,6 +16,7 @@ class RepositoryListViewController: UIViewController {
     
     // MARK: - Private properties
     
+    private var alertHandler: AlertHandler?
     private var viewReference: RepositoryListView?
     private var viewModel: RepositoryListViewModel?
     
@@ -24,6 +25,7 @@ class RepositoryListViewController: UIViewController {
     override func loadView() {
         super.loadView()
         
+        self.alertHandler = AlertHandler(delegate: self)
         let view = RepositoryListView()
         self.viewReference = view
         self.view = view
@@ -53,7 +55,7 @@ class RepositoryListViewController: UIViewController {
     // MARK: - Private methods
     
     private func setupViewModel() {
-        let viewModel = RepositoryListViewModel(coordinatorReference: coordinator)
+        let viewModel = RepositoryListViewModel(coordinatorReference: coordinator, alertHandlerReference: alertHandler)
         self.viewModel = viewModel
     }
     
@@ -63,7 +65,6 @@ class RepositoryListViewController: UIViewController {
         }
         viewReference?.configure(with: viewModel)
         
-        // TODO: Handle errors
         RepositoryWarehouse.shared.fetchMoreRepositories { (result) in
             switch result {
             case .success():
@@ -71,7 +72,9 @@ class RepositoryListViewController: UIViewController {
                     self.viewReference?.repositoryListTableView.reloadData()
                 }
             case .failure(let error):
-                print(error)
+                DispatchQueue.main.async {
+                    self.alertHandler?.showAlertDialog(title: "Error while fetching more repositories", message: error.localizedDescription)
+                }
             }
         }
     }

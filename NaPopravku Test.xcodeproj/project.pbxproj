@@ -45,6 +45,7 @@
 		DD26CFB5249BB3F900B09F73 /* Commit+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD26CFB4249BB3F900B09F73 /* Commit+Equatable.swift */; };
 		DD26CFB7249BB61000B09F73 /* Owner+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD26CFB6249BB61000B09F73 /* Owner+Equatable.swift */; };
 		DD26CFBF249BC38200B09F73 /* NaPopravku_Test_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD26CFBE249BC38200B09F73 /* NaPopravku_Test_UITests.swift */; };
+		DD26CFC7249C001C00B09F73 /* AlertHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD26CFC6249C001C00B09F73 /* AlertHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,7 @@
 		DD26CFBC249BC38200B09F73 /* NaPopravku Test UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NaPopravku Test UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD26CFBE249BC38200B09F73 /* NaPopravku_Test_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaPopravku_Test_UITests.swift; sourceTree = "<group>"; };
 		DD26CFC0249BC38200B09F73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD26CFC6249C001C00B09F73 /* AlertHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +222,7 @@
 				DD212326249A02A000A9D2EA /* ImageCache.swift */,
 				DD212322249A01DA00A9D2EA /* URLBuilder.swift */,
 				DD21235D249A3BB600A9D2EA /* RepositoryWarehouse.swift */,
+				DD26CFC6249C001C00B09F73 /* AlertHandler.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -482,6 +485,7 @@
 				DD212333249A036400A9D2EA /* CustomError.swift in Sources */,
 				DD212354249A14D900A9D2EA /* UITableViewCell + ReuseIdentifier.swift in Sources */,
 				DD21236E249B6C9500A9D2EA /* RepositoryInfoViewController.swift in Sources */,
+				DD26CFC7249C001C00B09F73 /* AlertHandler.swift in Sources */,
 				DD212371249B6E0000A9D2EA /* RepositoryInfoView.swift in Sources */,
 				DD212330249A033100A9D2EA /* Dictionary+PercentEncoded.swift in Sources */,
 				DD212360249A3D7900A9D2EA /* RepositoryListTableViewDelegate.swift in Sources */,

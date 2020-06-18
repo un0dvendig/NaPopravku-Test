@@ -22,6 +22,8 @@ class RepositoryInfoView: UIView {
     
     lazy var repositoryInfoRepositoryAuthorAvatarImageView: AsyncImageView = {
         let imageView = AsyncImageView()
+        imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = 10
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
@@ -32,6 +34,13 @@ class RepositoryInfoView: UIView {
         label.textAlignment = .center
         label.textColor = .black
         return label
+    }()
+    
+    lazy var repositoryLastCommitInfoLoadingActivityIndicatorView: UIActivityIndicatorView = {
+        let activityIndicator = UIActivityIndicatorView()
+        activityIndicator.style = .gray
+        activityIndicator.hidesWhenStopped = true
+        return activityIndicator
     }()
     
     lazy var repositoryInfoLastCommitMessageLabel: UILabel = {
@@ -67,6 +76,10 @@ class RepositoryInfoView: UIView {
         return label
     }()
     
+    // MARK: - Properties
+    
+    weak var alertHandlerReference: AlertHandler?
+    
     // MARK: - Initialization
     
     override init(frame: CGRect) {
@@ -84,7 +97,6 @@ class RepositoryInfoView: UIView {
     
     // MARK: - Methods
 
-    // TODO: Handle errors
     func configure(with viewModel: RepositoryInfoViewModel) {
         repositoryInfoRepositoryNameLabel.text = viewModel.repositoryName
         
@@ -94,21 +106,27 @@ class RepositoryInfoView: UIView {
                 case .success():
                     break
                 case .failure(let error):
-                    print(error)
+                    DispatchQueue.main.async {
+                        self.alertHandlerReference?.showAlertDialog(title: "Error while loading repository author avatar", message: error.localizedDescription)
+                    }
                 }
             }
         }
         
-        // TODO: Add activity indicator
         if viewModel.needsMoreInfo {
+            repositoryLastCommitInfoLoadingActivityIndicatorView.startAnimating()
             RepositoryWarehouse.shared.fetchMoreInfo(about: viewModel.repositoryReference) { (result) in
                 switch result {
                 case .success():
                     DispatchQueue.main.async {
                         self.configureLastCommit(with: viewModel)
+                        self.repositoryLastCommitInfoLoadingActivityIndicatorView.stopAnimating()
                     }
                 case .failure(let error):
-                    print(error)
+                    DispatchQueue.main.async {
+                        print(error)
+                        self.repositoryLastCommitInfoLoadingActivityIndicatorView.stopAnimating()
+                    }
                 }
             }
         } else {
@@ -129,6 +147,8 @@ class RepositoryInfoView: UIView {
         self.addSubview(repositoryInfoRepositoryNameLabel)
         self.addSubview(repositoryInfoRepositoryAuthorAvatarImageView)
         self.addSubview(repositoryInfoRepositoryAuthorNameLabel)
+        
+        self.addSubview(repositoryLastCommitInfoLoadingActivityIndicatorView)
         self.addSubview(repositoryInfoLastCommitMessageLabel)
         self.addSubview(repositoryInfoLastCommitAuthorNameLabel)
         self.addSubview(repositoryInfoLastCommitDateLabel)
@@ -141,6 +161,7 @@ class RepositoryInfoView: UIView {
         setupRepositoryAuthorAvatarImageView()
         setupRepositoryAuthorNameLabel()
         
+        setupLastCommitInfoLoadingActivityIndicatorView()
         setupLastCommitMessageLabel()
         setupLastCommitAuthorNameLabel()
         setupLastCommitDateLabel()
@@ -180,6 +201,15 @@ class RepositoryInfoView: UIView {
         ])
         
         repositoryInfoRepositoryAuthorNameLabel.setContentHuggingPriority(.defaultHigh, for: .vertical)
+    }
+    
+    private func setupLastCommitInfoLoadingActivityIndicatorView() {
+        repositoryLastCommitInfoLoadingActivityIndicatorView.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            repositoryLastCommitInfoLoadingActivityIndicatorView.centerYAnchor.constraint(equalTo: self.safeAreaLayoutGuide.centerYAnchor),
+            repositoryLastCommitInfoLoadingActivityIndicatorView.centerXAnchor.constraint(equalTo: self.safeAreaLayoutGuide.centerXAnchor)
+        ])
     }
     
     private func setupLastCommitMessageLabel() {

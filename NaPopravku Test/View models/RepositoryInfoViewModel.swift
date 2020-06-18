@@ -76,7 +76,6 @@ struct RepositoryInfoViewModel {
         return authorName
     }
     
-    // TODO: Formate date to be dd.mm.yyyy
     var lastCommitDate: String {
         guard let dateString = lastCommit?.commit?.author.date else {
             fatalError("Check 'needsMoreInfo' before accessing this property.")

@@ -17,6 +17,7 @@ class RepositoryInfoViewController: UIViewController {
     
     // MARK: - Private properties
     
+    private var alertHandler: AlertHandler?
     private var viewReference: RepositoryInfoView?
     private var viewModel: RepositoryInfoViewModel?
     
@@ -25,7 +26,9 @@ class RepositoryInfoViewController: UIViewController {
     override func loadView() {
         super.loadView()
         
+        self.alertHandler = AlertHandler(delegate: self)
         let view = RepositoryInfoView()
+        view.alertHandlerReference = self.alertHandler
         self.viewReference = view
         self.view = view
     }

@@ -14,6 +14,7 @@ class RepositoryListTableViewCell: UITableViewCell {
     
     lazy var repositoryOwnerAvatarImageView: AsyncImageView = {
         let imageView = AsyncImageView()
+        imageView.clipsToBounds = true
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
@@ -44,6 +45,10 @@ class RepositoryListTableViewCell: UITableViewCell {
         return label
     }()
 
+    // MARK: - Properties
+    
+    weak var alertHandlerReference: AlertHandler?
+    
     // MARK: - Initialization
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -66,16 +71,20 @@ class RepositoryListTableViewCell: UITableViewCell {
         
         repositoryOwnerLoginLabel.text = viewModel.ownerLogin
         
-        // TODO: Handle error
         repositoryOwnerAvatarImageLoadingIndicatorView.startAnimating()
         if let avatarURL = viewModel.ownerAvatarURL {
             repositoryOwnerAvatarImageView.loadImageFrom(url: avatarURL) { (result) in
                 switch result {
                 case .success():
-                    self.repositoryOwnerAvatarImageLoadingIndicatorView.stopAnimating()
+                    DispatchQueue.main.async {
+                        self.repositoryOwnerAvatarImageView.layer.cornerRadius = self.repositoryOwnerAvatarImageView.frame.height / 2
+                        self.repositoryOwnerAvatarImageLoadingIndicatorView.stopAnimating()
+                    }
                 case .failure(let error):
-                    print(error)
-                    self.repositoryOwnerAvatarImageLoadingIndicatorView.stopAnimating()
+                    DispatchQueue.main.async {
+                        self.repositoryOwnerAvatarImageLoadingIndicatorView.stopAnimating()
+                        self.alertHandlerReference?.showAlertDialog(title: "Error while loading owner avatar image", message: error.localizedDescription)
+                    }
                 }
             }
         } else {

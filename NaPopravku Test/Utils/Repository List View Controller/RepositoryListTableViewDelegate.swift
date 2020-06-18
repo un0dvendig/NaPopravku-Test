@@ -24,6 +24,7 @@ class RepositoryListTableViewDelegate: NSObject, UITableViewDelegate {
         guard let repository = RepositoryWarehouse.shared.getRepository(at: indexPath.row) else {
             return
         }
+        tableView.deselectRow(at: indexPath, animated: true)
         coordinatorReference?.showDetailedInfoAbout(repository: repository)
     }
     

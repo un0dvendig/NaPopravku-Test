@@ -40,7 +40,7 @@ class DownloadManager {
                 completion(.success(data))
             } else if let response = response as? HTTPURLResponse,
                 response.statusCode == 403 {
-                let error = CustomError.errorWithText("Request limit exceeded")
+                let error = CustomError.requestLimit
                 completion(.failure(error))
             } else {
                 let error = CustomError.errorWithText("Data or response error")
